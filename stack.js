@@ -23,6 +23,23 @@ class Stack {
     this.top = node.next;
     return node.data;
   }
+  peek() {
+    console.log(this.top.data);
+    return this.top.data;
+  }
+  isEmpty() {
+    if(this.top == null) {
+      return true;
+    }
+    return false;
+  }
+  display(){
+    let current = this.top;
+    while (current) {
+      console.log(current.data);
+      current = current.next;
+    }
+  }
 }
 
 class Queue {
@@ -61,4 +78,8 @@ values.forEach((value) => {
   starTrek.push(value);
 });
 
-console.log(starTrek);
+starTrek.peek();
+starTrek.display();
+starTrek.pop();
+
+
